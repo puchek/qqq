@@ -10,7 +10,7 @@ export class BranchesService {
   private branches: Branch[] = [
     new Branch('1', 'Москва', [
       new Depot('ЛВЧД-7 Киров', '1', 'Е.В.Попов, зам. нач. по эксплуатации, т. (909) 721-31-11 '),
-      new Depot('ЛВЧ Казаньв', '2', 'Электроник Сафин М.М. 89673664428 ')
+      new Depot('ЛВЧ Казань', '2', 'Электроник Сафин М.М. 89673664428 ')
     ]),
     new Branch('2', 'Питер')
   ];
@@ -21,4 +21,7 @@ export class BranchesService {
     return this.branches;
   }
 
+  getBranchByIndex(index: number) {
+    return this.branches[index];
+  }
 }

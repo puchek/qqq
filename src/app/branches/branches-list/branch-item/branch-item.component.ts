@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Branch} from '../../shared/branch.model';
+import {Branch} from '../../../shared/branch.model';
 
 @Component({
   selector: 'app-branch-item',

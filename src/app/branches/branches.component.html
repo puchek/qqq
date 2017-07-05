@@ -1,11 +1,8 @@
 <div class="row">
-  <div class="col-xs-12">
-    <app-branch-item
-      *ngFor="let branchEl of branches; let i = index"
-      [branch]="branchEl"
-      [indexInArray]="i">
-    </app-branch-item>
+  <div class="col-md-5">
+    <app-branche-list></app-branche-list>
+  </div>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-

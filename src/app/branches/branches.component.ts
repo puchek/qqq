@@ -1,32 +1,15 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import { BranchesService } from './branches.service';
-import { Branch } from '../shared/branch.model';
-import {Subscription} from 'rxjs/Subscription';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-branches',
   templateUrl: './branches.component.html',
   styleUrls: ['./branches.component.css']
 })
-export class BranchesComponent implements OnInit, OnDestroy {
-  branches: Branch[];
-  subscribtion: Subscription;
+export class BranchesComponent implements OnInit {
 
-  constructor(private branchService: BranchesService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.branches = this.branchService.getBranches();
-    console.log('subscribe');
-    this.subscribtion = this.branchService.branchesChanged
-      .subscribe(
-        (branches: Branch[]) => {
-          console.log('catched');
-          this.branches = branches;
-        }
-      );
   }
 
-  ngOnDestroy() {
-    this.subscribtion.unsubscribe();
-  }
 }
