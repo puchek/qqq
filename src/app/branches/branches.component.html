@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-branch-item
+      *ngFor="let branchEl of branches; let i = index"
+      [branch]="branchEl"
+      [indexInArray]="i">
+    </app-branch-item>
+  </div>
+</div>
+
+

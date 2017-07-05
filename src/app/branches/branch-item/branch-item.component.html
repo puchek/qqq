@@ -1,0 +1,17 @@
+<!--<div class="row">-->
+  <!--<div class="col-xs-12">-->
+    <!--{{ branch.name }} ( {{ branch.code }} )-->
+  <!--</div>-->
+<!--</div>-->
+
+<a
+  style="cursor: pointer;"
+  [routerLink]="[indexInArray]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ branch.name  }}</h4>
+    <p class="list-group-item-text">{{ branch.code}}</p>
+  </div>
+
+</a>
