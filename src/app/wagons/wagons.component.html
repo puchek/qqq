@@ -1,0 +1,26 @@
+<p>
+  wagons works!
+</p>
+
+<h3 class="first">Basic</h3>
+<input id="in" type="text" size="30" pInputText [(ngModel)]="text">  {{text}}
+
+<div class="content-section implementation">
+  <h3 class="first">Basic</h3>
+  <input id="in1" type="text" size="30" pInputText [(ngModel)]="text"> {{text}}
+
+  <h3>Disabled</h3>
+
+</div>
+
+
+<p-dataTable [value]="wagons" resizableColumns="true">
+  <p-column
+    field="serialNumber"
+    header="SN"
+    filter="true"
+    sortable="true"
+    filterMatchMode="contains"></p-column>
+  <p-column field="model" header="Mod"></p-column>
+  <p-column field="depot" header="Депо"></p-column>
+</p-dataTable>

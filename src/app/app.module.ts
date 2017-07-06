@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BranchesModule } from './branches/branches.module';
 import { DepotsModule } from './depots/depots.module';
+import { WagonsModule } from './wagons/wagons.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DepotsModule } from './depots/depots.module';
     BrowserModule,
     CoreModule,
     BranchesModule,
-    DepotsModule
+    DepotsModule,
+    WagonsModule
   ],
   providers: [ ],
   bootstrap: [ AppComponent ]
