@@ -5,6 +5,7 @@ import {FormsModule}    from '@angular/forms';
 import {InputTextModule} from 'primeng/primeng';
 import {DataTableModule,SharedModule} from 'primeng/primeng';
 import {WagonsService} from './wagons.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import {WagonsService} from './wagons.service';
     FormsModule,
     InputTextModule,
     DataTableModule,
-    SharedModule
+    SharedModule,
+    HttpModule
   ],
   declarations: [ WagonsComponent ],
   exports: [ WagonsComponent ],

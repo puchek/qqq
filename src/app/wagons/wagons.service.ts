@@ -1,36 +1,25 @@
 import { Injectable } from '@angular/core';
-import {Wagon, WagonObj} from '../shared/wagon.model';
+import {Wagon} from '../shared/wagon.model';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class WagonsService {
-  wagons: Wagon[] = [];
-  wagonsObj: WagonObj[];
+  wagons: Wagon[];
 
-  constructor() {
-    this.wagons = [
-      new Wagon('000-11111', 'qwert', 'qwerty'),
-      new Wagon('000-11112', 'qwert2', 'qwerty'),
-    ];
+  constructor(private http: Http) { }
 
-    this.wagonsObj = [
-      {
-        serialNumber : '123456789',
-        model: 'qwertyu',
-        depot : 'zaxcvbnm'
-      },
-      {
-        serialNumber : '876754',
-        model: 'qwertyu',
-        depot : 'zaxcvbnm'
-      }
-    ];
+  getWagons() {
+    return this.http.get('http://localhost:3000/wagons')
+      .toPromise()
+      .then(res => {
+        // console.log(res.json());
+        return <Wagon[]> res.json()
+      });
+      // .then(data => {
+      //   console.log('here', data);
+      //   return data;
+      // });
   }
 
-  getWagons(): Wagon[] {
-    return this.wagons;
-  }
-
-  getWagonsObj(): Wagon[] {
-    return this.wagonsObj;
-  }
 }

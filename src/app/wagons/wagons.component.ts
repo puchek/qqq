@@ -16,7 +16,7 @@ export class WagonsComponent implements OnInit {
   constructor(private wagonService: WagonsService) { }
 
   ngOnInit() {
-    this.wagons = this.wagonService.getWagonsObj();
+    this.wagonService.getWagons().then(wagons => this.wagons = wagons);
   }
 
 }

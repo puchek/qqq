@@ -1,11 +1,8 @@
-export class Wagon {
-
-  constructor (serialNumber: string, model: string, depot: string) {};
-
-}
-
-export interface WagonObj {
+export interface Wagon {
   serialNumber :string ;
-  model: string;
+  modelNumber: string;
+  type : string;
+  year : string;
   depot : string;
+  branch : string;
 }
